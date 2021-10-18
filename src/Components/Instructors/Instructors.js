@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Instructor from './Instructor/Instructor';
 import './Instructors.css';
+import instructorBanner from '../../images/instructorpagebanner.jpg';
 
 const Instructors = () => {
     const [instructors, setinstructors] = useState([]);
@@ -17,7 +18,7 @@ const Instructors = () => {
                         <h1>Hello we are from Jayeen's Gym</h1>
                     </div>
                     <div className="ins-head-right">
-                        <img src="" alt="" />
+                        <img src={instructorBanner} alt="instructorBanner" />
                     </div>
                 </div>
                 <div className="instructors">
