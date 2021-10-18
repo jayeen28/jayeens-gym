@@ -24,6 +24,7 @@
 }
   .service-box-button:hover{
     border: 1px solid #C9AB81;
+    color: white;
     transition: 1s;
     background-color: #C9AB81;
 }

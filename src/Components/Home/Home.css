@@ -1,5 +1,5 @@
 .banner-section {
-    background-image: url('../../images/banner-background.jpg'),linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-image: url('../../images/banner-background.jpg'),linear-gradient(rgb(0 0 0 / 56%),rgb(0 0 0 / 50%));
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
