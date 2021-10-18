@@ -1,0 +1,33 @@
+.footer-section{
+    background-color: #0F1D22;
+}
+.footer-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 4% 0%;
+}
+.footer-contents svg {
+    margin: 0px 5px;
+    font-size: 20px;
+    color: #867F6C;
+}
+.footer-brand {
+    width: 250px;
+    margin: auto;
+}
+.social-media a:hover {
+    text-decoration: underline;
+    color: white;
+}
+.social-media {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.footer-call-email {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
