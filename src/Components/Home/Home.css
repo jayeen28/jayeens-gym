@@ -1,0 +1,52 @@
+.banner-section {
+    background-image: url('../../images/banner-background.jpg'),linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 550px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.banner-contents {
+    display: flex;
+    justify-content: space-between; 
+    color: white;
+    padding: 4% 0%;
+}
+.banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+.banner-left h1 {
+    font-size: 65px;
+}
+.banner-left a:hover {
+    border: 1px solid #C9AB81;
+    transition: 1s;
+    background-color: #C9AB81;
+}
+.banner-left a {
+    text-align: center;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 1px solid #C9AB81;
+}
+/* services section */
+.services-section {
+    padding: 3% 0%;
+}
+.service-boxes {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+}
+.services-head {
+    margin-bottom: 25px;
+}

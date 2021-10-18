@@ -18,8 +18,8 @@ const Header = () => {
                         <Nav className="me-auto"></Nav>
                         <Nav>
                             <div className="nav-menu">
-                                <Link to="/">Instructor</Link>
-                                <Link to="/">Contact us</Link>
+                                <Link to="/instructors">Instructors</Link>
+                                <Link to="/contactus">Contact us</Link>
                             </div>
                             {/* <div className="user-profile">
                                 <div className="name-and-picture">

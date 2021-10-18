@@ -1,0 +1,37 @@
+.srvc-box img {
+    border-radius: 10px;
+}
+
+.srvc-box {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    background-color: #0F1D22;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+.service-box-button {
+    width: 128px;
+    background-color: transparent;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: 1px solid #C9AB81;
+    font-size: 15px;
+}
+  .service-box-button:hover{
+    border: 1px solid #C9AB81;
+    transition: 1s;
+    background-color: #C9AB81;
+}
+  .srvc-title {
+    font-size: 21px;
+}
+p.srvc-desc {
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    line-height: 20px;
+}
