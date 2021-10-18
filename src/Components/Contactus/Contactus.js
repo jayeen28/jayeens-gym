@@ -28,7 +28,7 @@ const Contactus = () => {
                         <h2>Here we are</h2>
                     </div>
                     <div className="map">
-                        <iframe title="jayeensgym" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.5632957775283!2d-86.77108438496654!3d40.37420656614922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88131b0bbf85b4ef%3A0x85fe1a77ce1845ab!2sThe%20Gym!5e0!3m2!1sen!2sbd!4v1634589012692!5m2!1sen!2sbd" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
+                        <iframe title="jayeensgym" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14599.553206870356!2d90.38467432467125!3d23.822570682452717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c6c2ab936b87%3A0xcaa915c4069493be!2sECB%20Chattar%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1634590555598!5m2!1sen!2sbd" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
