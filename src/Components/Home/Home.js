@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Service from '../Service/Service';
 import './Home.css';
 const Home = () => {
-    const [services, setservices] = useState();
+    const [services, setservices] = useState([]);
+    const [reviews, setreviews] = useState([]);
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/servicesData.json')
             .then(res => res.json())
             .then(data => setservices(data))
+    }, []);
+    useEffect(() => {
+        fetch('https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/reviews.json')
+            .then(res => res.json())
+            .then(data => setreviews(data))
     }, [])
     return (
         <main>
@@ -20,7 +27,25 @@ const Home = () => {
                             <Link to="/contactus">Contact us</Link>
                         </div>
                         <div className="banner-right">
-                            <h1>gym gym</h1>
+                            <div className="banner-right-head">
+                                <h3>Reviews</h3>
+                            </div>
+                            <div className="reviews-carousel">
+                                <Carousel indicators={false} controls={false} pause={false}>
+                                    {/* I tried to put this on a component but it was giving a ref error */}
+                                    {reviews.map(rev =>
+                                        <Carousel.Item key={rev._id} className="rev-item">
+                                            <div className="carousel-img">
+                                                <img src={rev.img} alt="carouselImage" />
+                                            </div>
+                                            <div className="carousel-contents">
+                                                <h5>{rev.name}</h5>
+                                                <p>{rev.review}</p>
+                                                <span className="review-time">-{rev.time}</span>
+                                            </div>
+                                        </Carousel.Item>)}
+                                </Carousel>
+                            </div>
                         </div>
                     </div>
                 </div>
