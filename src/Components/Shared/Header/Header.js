@@ -1,27 +1,34 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import jayeensGym from '../../../images/Jayeensgymblack.png'
 import './Header.css';
 const Header = () => {
     return (
-        <header>
-            <Navbar bg="light" expand="lg">
+        <header className="header-section">
+            <Navbar expand="lg" className="nav-section">
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Link to='/home'>
+                        <div className="jayeensgym-logo">
+                            <img src={jayeensGym} alt="JayeensGymLogo" />
+                        </div>
+                    </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link href="#link">Instructor</Nav.Link>
-                            <Nav.Link href="#link">Contact us</Nav.Link>
-                        </Nav>
+                        <Nav className="me-auto"></Nav>
                         <Nav>
-                            <div className="user-profile">
+                            <div className="nav-menu">
+                                <Link to="/">Instructor</Link>
+                                <Link to="/">Contact us</Link>
+                            </div>
+                            {/* <div className="user-profile">
                                 <div className="name-and-picture">
                                     <p>mr jayeen</p>
                                 </div>
                                 <div className="btn-management">
                                     <button>Log out</button>
                                 </div>
-                            </div>
+                            </div> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

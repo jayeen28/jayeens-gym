@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
-
+body a{
+text-decoration: none;
+color:white;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -25,7 +30,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color:white;
 }
 
 @keyframes App-logo-spin {
