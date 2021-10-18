@@ -1,0 +1,45 @@
+.sdtail-left, .sdtail-right {
+    width: 50%;
+    text-align: left;
+}
+.sdtail-left{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.srvc-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 5% 1%;
+}
+.srvc-img {
+    width: 450px;
+    box-shadow: #17252a 30px 30px 0px;
+}
+.sdtail-left p {
+    font-size: 18px;
+    letter-spacing: .6px;
+    word-spacing: 3px;
+    line-height: 32px;
+}
+
+.sdtail-left h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.sdtail-left a {
+    border: 1px solid #C9AB81;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    text-align: center;
+    width: 180px;
+}
+.sdtail-left a:hover{
+    background-color: #C9AB81;
+    transition: 1s;
+    color: white;
+}

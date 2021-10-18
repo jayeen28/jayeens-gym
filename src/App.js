@@ -6,6 +6,8 @@ import Home from './Components/Home/Home';
 import Contactus from './Components/Contactus/Contactus';
 import Instructors from './Components/Instructors/Instructors';
 import Error from './Components/Error/Error';
+import Footer from './Components/Shared/Footer/Footer';
+import SrvcDetail from './Components/SrvcDetail/SrvcDetail';
 
 function App() {
   return (
@@ -26,10 +28,14 @@ function App() {
           <Route path="/contactus">
             <Contactus></Contactus>
           </Route>
+          <Route path="/service/:srvcId">
+            <SrvcDetail></SrvcDetail>
+          </Route>
           <Route path="*">
             <Error></Error>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </div>
   );
