@@ -1,0 +1,26 @@
+.instructor-box {
+    background-color: #0F1D22;
+    display: flex;
+    text-align: left;
+    gap: 10px;
+    border: 1px solid #C9AB81;
+    border-radius: 10px;
+    padding: 5px;
+}
+.ins-box-img {
+    width: 50%;
+    height: 100%;
+}
+.ins-box-img img {
+    border-radius: 10px;
+}
+.ins-information p {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+.ins-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
