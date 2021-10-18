@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Components/Shared/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello I am jayeen</h1>
+      {/* header section */}
+      <Header></Header>
     </div>
   );
 }
