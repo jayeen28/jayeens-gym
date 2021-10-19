@@ -1,5 +1,5 @@
 import initialAuthentication from "../Firebase/Firebase.init";
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 // firebase initialization
 initialAuthentication();
@@ -28,9 +28,17 @@ const useFirebase = () => {
             seterror(error.message);
         });
     }
+    //signin user
+    const signIn = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then(res => setuser(res.user))
+            .catch(error => seterror(error.message))
+    }
+
     console.log(user)
     console.log(error)
     return {
+        signIn,
         signUp,
         user,
         error
