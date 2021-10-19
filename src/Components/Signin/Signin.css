@@ -1,0 +1,34 @@
+form.signin-up-form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+    gap: 25px;
+}
+.signin-up-form a:hover{
+    color: white;
+}
+.sin-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 5% 0;
+}
+.user-inputs {
+    padding: 10px;
+    background-color: #0F1D22;
+    border: 1px solid #C9AB81;
+    border-radius: 20px;
+    color: white;
+}
+
+.google-btn{
+    cursor: pointer;
+}
+
+/* media query */
+@media only screen and (max-width:768px){
+    form.signin-form{
+        width: 90%;
+    }
+}

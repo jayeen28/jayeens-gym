@@ -8,6 +8,8 @@ import Instructors from './Components/Instructors/Instructors';
 import Error from './Components/Error/Error';
 import Footer from './Components/Shared/Footer/Footer';
 import SrvcDetail from './Components/SrvcDetail/SrvcDetail';
+import Signin from './Components/Signin/Signin';
+import Signup from './Components/Signup/Signup';
 
 function App() {
   return (
@@ -30,6 +32,12 @@ function App() {
           </Route>
           <Route path="/service/:srvcId">
             <SrvcDetail></SrvcDetail>
+          </Route>
+          <Route path="/signin">
+            <Signin></Signin>
+          </Route>
+          <Route path="/signup">
+            <Signup></Signup>
           </Route>
           <Route path="*">
             <Error></Error>

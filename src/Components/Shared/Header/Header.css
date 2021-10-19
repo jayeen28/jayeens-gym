@@ -19,3 +19,17 @@ img {
     width: 100%;
     height: 100%;
 }
+.nav-buttons a:hover {
+    color: white;
+    border: 1px solid #C9AB81;
+    background-color: #C9AB81;
+    transition: 1s;
+}
+
+.nav-buttons a {
+    padding: 5px 10px;
+    margin: 0 8px;
+    background-color: #182326;
+    border-radius: 10px;
+    border: 1px solid #C9AB81;
+}
