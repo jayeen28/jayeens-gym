@@ -1,9 +1,12 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 import jayeensGym from '../../../images/Jayeensgymblack.png'
 import './Header.css';
 const Header = () => {
+    const { user, signout } = useAuth();
+    console.log(user);
     return (
         <header className="header-section">
             <Navbar expand="lg" className="nav-section">
@@ -16,23 +19,18 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto"></Nav>
-                        <Nav>
+                        <Nav className="header-nav">
                             <div className="nav-menu">
                                 <Link to="/instructors">Instructors</Link>
                                 <Link to="/contactus">Contact us</Link>
                             </div>
                             <div className="nav-buttons">
-                                <Link to="/signin">Sign in</Link>
-                                <Link to="/signup">Sign up</Link>
+                                {user?.email ? <button className="nav-button" onClick={() => { signout() }} >Sign out</button> :
+                                    <span>
+                                        <Link to="/signin" className="nav-button">Sign in</Link>
+                                        <Link to="/signup" className="nav-button">Sign up</Link>
+                                    </span>}
                             </div>
-                            {/* <div className="user-profile">
-                                <div className="name-and-picture">
-                                    <p>mr jayeen</p>
-                                </div>
-                                <div className="btn-management">
-                                    <button>Log out</button>
-                                </div>
-                            </div> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
