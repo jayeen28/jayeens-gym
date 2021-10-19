@@ -11,6 +11,7 @@ import SrvcDetail from './Components/SrvcDetail/SrvcDetail';
 import Signin from './Components/Signin/Signin';
 import Signup from './Components/Signup/Signup';
 import AuthProvider from './Contexts/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -25,15 +26,15 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/instructors">
+            <PrivateRoute path="/instructors">
               <Instructors></Instructors>
-            </Route>
-            <Route path="/contactus">
+            </PrivateRoute>
+            <PrivateRoute path="/contactus">
               <Contactus></Contactus>
-            </Route>
-            <Route path="/service/:srvcId">
+            </PrivateRoute>
+            <PrivateRoute path="/service/:srvcId">
               <SrvcDetail></SrvcDetail>
-            </Route>
+            </PrivateRoute>
             <Route path="/signin">
               <Signin></Signin>
             </Route>

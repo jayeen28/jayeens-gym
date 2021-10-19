@@ -1,14 +1,35 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import googleBtn from '../../images/google-btn.png';
 import './Signin.css';
 const Signin = () => {
-    const { signIn, googleSignIn } = useAuth();
+    const { signIn, googleSignIn, setuser, setisLoading, seterror } = useAuth();
     const { register, handleSubmit } = useForm();
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_url = location.state?.from || '/home';
     const onSubmit = ({ email, password }) => {
-        signIn(email, password);
+        signIn(email, password)
+            .then(res => {
+                setuser(res.user);
+                history.push(redirect_url)
+            })
+            .catch(error => seterror(error.message))
+            .finally(() => setisLoading(false))
+    }
+    //handle google sign in
+    const handleGoogeSignIn = () => {
+        googleSignIn()
+            .then((res) => {
+                setuser(res.user);
+                history.push(redirect_url);
+
+            }).catch((error) => {
+                seterror(error.message);
+                setisLoading(false)
+            });
     }
     return (
         <div>
@@ -27,7 +48,7 @@ const Signin = () => {
                             </form>
                             <div className="brand-signin-btns">
                                 <div className="google-btn">
-                                    <img src={googleBtn} onClick={googleSignIn} alt="googlebtn" />
+                                    <img src={googleBtn} onClick={handleGoogeSignIn} alt="googlebtn" />
                                 </div>
                             </div>
                         </div>

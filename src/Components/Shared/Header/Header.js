@@ -1,13 +1,12 @@
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import jayeensGym from '../../../images/Jayeensgymblack.png'
 import './Header.css';
 const Header = () => {
-    const { user, signout } = useAuth();
+    const { user, signout, isLoading } = useAuth();
+    if (isLoading) { return <Spinner animation="grow" variant="light" /> }
+    console.log(user)
     return (
         <header className="header-section">
             <Navbar expand="lg" className="nav-section">
@@ -26,20 +25,14 @@ const Header = () => {
                                 <Link to="/contactus">Contact us</Link>
                             </div>
                             <div className="nav-buttons">
-                                {user?.email ? <button className="nav-button" onClick={() => { signout() }} >Sign out</button> :
+                                {user.email ? <button className="nav-button" onClick={() => { signout() }} >Sign out</button> :
                                     <span>
                                         <Link to="/signin" className="nav-button">Sign in</Link>
                                         <Link to="/signup" className="nav-button">Sign up</Link>
                                     </span>}
                             </div>
-                            <div className="nav-profile-name">
-                                {user?.email ? <div className="profile-content">
-                                    <div className="profile-image-container">
-                                        <FontAwesomeIcon icon={faUserCircle} className="profile-img" />
-                                        {/* {user.photoURL ? <img src={user.photoURL} alt="profileimage" className="profile-img" /> : <FontAwesomeIcon icon={faUserCircle} className="profile-img" />} */}
-                                    </div>
-                                    <div className="profile-name">{user.displayName}</div>
-                                </div> : <div></div>}
+                            <div className="profile-content">
+                                {user.displayName && <div className="profile-name">{user.displayName}</div>}
                             </div>
                         </Nav>
                     </Navbar.Collapse>

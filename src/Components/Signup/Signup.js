@@ -1,14 +1,15 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import googleBtn from '../../images/google-btn.png';
 
 const Signup = () => {
-    const { signUp, googleSignIn } = useAuth();
+    const { signUp, googleSignIn, } = useAuth();
     const { register, handleSubmit } = useForm();
-    const onSubmit = ({ email, password, name }) => {
-        signUp(email, password, name);
+    //handle on submit
+    const onSubmit = ({ email, password, userName }) => {
+        signUp(email, password, userName)
     }
     return (
         <div className="signup-page">
@@ -19,7 +20,7 @@ const Signup = () => {
                     </div>
                     <div className="signup-form">
                         <form onSubmit={handleSubmit(onSubmit)} className="signin-up-form">
-                            <input {...register("name")} className="user-inputs" type="text" placeholder="Name" />
+                            <input {...register("userName")} className="user-inputs" type="text" placeholder="Name" />
                             <input {...register("email")} className="user-inputs" type="email" id="sp-email" placeholder="Email" />
                             <input {...register("password")} className="user-inputs" type="password" id="sp-password" placeholder="Password" />
                             <input className="user-inputs" type="submit" value="Sign up" />
