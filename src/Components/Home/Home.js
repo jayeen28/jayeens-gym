@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Service from '../Service/Service';
+import Aboutus from './Aboutus/Aboutus';
 import './Home.css';
+import Service from './Service/Service';
 const Home = () => {
     const [services, setservices] = useState([]);
     const [reviews, setreviews] = useState([]);
@@ -19,7 +20,7 @@ const Home = () => {
     return (
         <main>
             {/* banner-section */}
-            <div className="banner-section">
+            <section className="banner-section">
                 <div className="container">
                     <div className="banner-contents">
                         <div className="banner-left">
@@ -49,9 +50,9 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             {/* services section */}
-            <div className="services-section">
+            <section className="services-section">
                 <div className="container">
                     <div className="services-head">
                         <h2 className="text-light">Our Services</h2>
@@ -62,16 +63,28 @@ const Home = () => {
                         }
                     </div>
                 </div>
-            </div>
+            </section>
             {/* Book trainer section */}
-            <div className="bookinstructor-section">
+            <section className="bookinstructor-section">
                 <div className="container">
                     <div className="bi-contents">
                         <h2>Let's do <br /> this!</h2>
                         <Link to="/instructors">Book an instructor</Link>
                     </div>
                 </div>
-            </div>
+            </section>
+            {/* about us section */}
+            <section className="aboutus-section">
+                <div className="container">
+                    <div className="abt-contents">
+                        <div className="abt-head">
+                            <h2>About us</h2>
+                            <h5>We will make you turn your Fat into Fit!</h5>
+                        </div>
+                        <Aboutus />
+                    </div>
+                </div>
+            </section>
         </main>
     );
 };

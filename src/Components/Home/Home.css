@@ -117,3 +117,7 @@ span.review-time {
     transition: 1s;
     background-color: #C9AB81;
 }
+/* about section */
+section.aboutus-section {
+    padding: 5% 0;
+}
