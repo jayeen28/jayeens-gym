@@ -1,6 +1,6 @@
-# Jayeen's gym  
+# Jayeen's Gym  
 ## Description  
-Wellcome to Jayeen's Gym. This website is a gym related website made with ractjs and firebase.  
+Wellcome to Jayeen's Gym. This website is a gym related website made with ractjs and firebase. It is an assignment project for programming hero.
 
 ## Link of the live site [https://jayeen-s-gym.web.app](https://jayeen-s-gym.web.app) 
 
