@@ -11,6 +11,7 @@ const Instructor = ({ instructor }) => {
                 <h5>{name}</h5>
                 <p>Address: {adrs}</p>
                 <p>Salary: {salary}</p>
+                <button>Book now</button>
             </div>
         </div>
     );
