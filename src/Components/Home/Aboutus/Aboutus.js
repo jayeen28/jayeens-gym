@@ -1,6 +1,7 @@
 import React from 'react';
 import './Aboutus.css';
 import abtusimage from '../../../images/aboutus.jpg';
+import SkillRanges from './SkillRanges/SkillRanges';
 const Aboutus = () => {
     return (
         <div className="abt-detail">
@@ -14,52 +15,7 @@ const Aboutus = () => {
                     <div className="abt-skills-head">
                         <h2>Skills</h2>
                     </div>
-                    <div className="abt-skills-ranges">
-                        <div className="range">
-                            <div className="range-head">
-                                <span className="range-name">ORGANIZED</span>
-                                <span className="range-percentage">90%</span>
-                            </div>
-                            <div className="range-bar">
-                                <div className="progress">
-                                    <div className="progress-bar bg-warning" role="progressbar" style={{ width: '90%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="range">
-                            <div className="range-head">
-                                <span className="range-name">TEACHING</span>
-                                <span className="range-percentage">92%</span>
-                            </div>
-                            <div className="range-bar">
-                                <div className="progress">
-                                    <div className="progress-bar bg-warning" role="progressbar" style={{ width: '92%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="range">
-                            <div className="range-head">
-                                <span className="range-name">MOTIVATIONAL</span>
-                                <span className="range-percentage">75%</span>
-                            </div>
-                            <div className="range-bar">
-                                <div className="progress">
-                                    <div className="progress-bar bg-warning" role="progressbar" style={{ width: '75%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="range">
-                            <div className="range-head">
-                                <span className="range-name">FRIENDLY</span>
-                                <span className="range-percentage">85%</span>
-                            </div>
-                            <div className="range-bar">
-                                <div className="progress">
-                                    <div className="progress-bar bg-warning" role="progressbar" style={{ width: '85%' }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <SkillRanges></SkillRanges>
                 </div>
             </div>
             <div className="abt-detail-right">

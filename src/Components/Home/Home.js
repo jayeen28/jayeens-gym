@@ -7,16 +7,21 @@ import Service from './Service/Service';
 const Home = () => {
     const [services, setservices] = useState([]);
     const [reviews, setreviews] = useState([]);
-    useEffect(() => {
-        fetch('https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/servicesData.json')
-            .then(res => res.json())
-            .then(data => setservices(data))
-    }, []);
+
+    //load banner reviews data
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/reviews.json')
             .then(res => res.json())
             .then(data => setreviews(data))
     }, [])
+
+    // load services boxes data
+    useEffect(() => {
+        fetch('https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/servicesData.json')
+            .then(res => res.json())
+            .then(data => setservices(data))
+    }, []);
+
     return (
         <main>
             <div className="conainer">

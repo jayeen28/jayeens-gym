@@ -140,7 +140,7 @@ section.aboutus-section {
         margin: 0px 0px 180px 0px;
     }
     .banner-left, .banner-right {
-        justify-content: start;
+        justify-content: flex-start;
         width: 100%;
         padding: 0;
         display: flex;

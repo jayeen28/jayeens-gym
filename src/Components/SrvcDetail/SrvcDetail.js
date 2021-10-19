@@ -7,6 +7,7 @@ const SrvcDetail = () => {
     const [service, setservice] = useState({});
     const { title, description, img } = service;
     const { srvcId } = useParams();
+
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/servicesData.json')
             .then(res => res.json())
@@ -18,7 +19,7 @@ const SrvcDetail = () => {
                 })
             })
     }, [])
-    console.log(service)
+
     return (
         <div className="srvc-detail-section">
             <div className="container">
