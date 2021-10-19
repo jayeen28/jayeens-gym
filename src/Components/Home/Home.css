@@ -90,3 +90,30 @@ span.review-time {
 .services-head {
     margin-bottom: 25px;
 }
+/* book constructor section */
+.bookinstructor-section {
+    padding: 5% 0;
+}
+.bi-contents h2 {
+    font-size: 160px;
+    font-weight: 700;
+    background-image: url('../../images/banner-background1.jpg');
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: contain;
+    background-position: center;
+}
+.bi-contents a{
+    text-align: center;
+    width: 200px;
+    background-color: #0F1D22;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 1px solid #C9AB81;
+}
+.bi-contents a:hover {
+    border: 1px solid #C9AB81;
+    transition: 1s;
+    background-color: #C9AB81;
+}

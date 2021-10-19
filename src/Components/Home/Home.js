@@ -63,6 +63,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            {/* Book trainer section */}
+            <div className="bookinstructor-section">
+                <div className="container">
+                    <div className="bi-contents">
+                        <h2>Let's do <br /> this!</h2>
+                        <Link to="/instructors">Book an instructor</Link>
+                    </div>
+                </div>
+            </div>
         </main>
     );
 };
