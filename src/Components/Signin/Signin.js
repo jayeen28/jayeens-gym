@@ -2,9 +2,10 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import googleBtn from '../../images/google-btn.png';
 import './Signin.css';
 const Signin = () => {
-    const { signIn } = useAuth();
+    const { signIn, googleSignIn } = useAuth();
     const { register, handleSubmit } = useForm();
     const onSubmit = ({ email, password }) => {
         signIn(email, password);
@@ -26,7 +27,7 @@ const Signin = () => {
                             </form>
                             <div className="brand-signin-btns">
                                 <div className="google-btn">
-                                    {/* <img onClick={googleSignIn} src={googleBtn} alt="googlebtn" /> */}
+                                    <img src={googleBtn} onClick={googleSignIn} alt="googlebtn" />
                                 </div>
                             </div>
                         </div>

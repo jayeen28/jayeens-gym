@@ -37,3 +37,20 @@ img {
     border: 1px solid #C9AB81;
     color: white;
 }
+.profile-content {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #14272e;
+    border: 1px solid #C9AB81;
+    border-radius: 20px;
+}
+.profile-image-container {
+    height: 26px;
+    width: 26px;
+}
+.profile-img{
+    width: 100%!important;
+    height: 100%;
+}
