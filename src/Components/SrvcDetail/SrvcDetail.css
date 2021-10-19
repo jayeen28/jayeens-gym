@@ -43,3 +43,16 @@
     transition: 1s;
     color: white;
 }
+@media only screen and (max-width:768px){
+    .srvc-content{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        padding: 50px 20px;
+    }
+    .sdtail-left, .sdtail-right{
+        width: 100%;
+    }
+    .srvc-img{
+        width:100%;
+    }
+}

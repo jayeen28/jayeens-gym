@@ -37,12 +37,27 @@ img {
     border: 1px solid #C9AB81;
     color: white;
 }
-.profile-content {
-    
-}
 .profile-name{
     padding: 5px 10px;
     background-color: #14272e;
     border: 1px solid #C9AB81;
-    border-radius: 20px;
+    border-radius: 10px;
+}
+.navbar-light .navbar-toggler-icon{
+    background-image: url('../../../images/toggle-button.svg')!important;
+}
+/* media query */
+@media only screen and (max-width:768px){
+    .nav-menu {
+        margin: 22px 0px;
+    }
+    .nav-menu a {
+        font-size: 18px;
+    }
+    .profile-name{
+        margin: 16px;
+    }
+    .nav-buttons {
+        margin: 20px;
+    }
 }

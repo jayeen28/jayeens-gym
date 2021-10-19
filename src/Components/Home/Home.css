@@ -80,7 +80,7 @@ span.review-time {
 }
 /* services section */
 .services-section {
-    padding: 3% 0%;
+    padding: 5% 0%;
 }
 .service-boxes {
     display: grid;
@@ -120,4 +120,61 @@ span.review-time {
 /* about section */
 section.aboutus-section {
     padding: 5% 0;
+}
+
+@media only screen and (max-width:768px){
+    .service-boxes{
+        grid-template-columns: repeat(1,1fr)
+    }
+    .banner-contents{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        grid-gap: 26px;
+        gap: 26px;
+    }
+    .banner-left h1 {
+        font-size: 36px;
+    }
+    .rev-item{
+        margin: 0px 0px 180px 0px;
+    }
+    .banner-left, .banner-right {
+        justify-content: start;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        grid-gap: 8px;
+        text-align: left;
+    }
+    .banner-right{
+        overflow: hidden;
+    }
+    .banner-section{
+        height: 690px;
+    }
+    .reviews-carousel {
+        width: 100%;
+        height: 400px;
+    }
+    .bi-contents h2{
+        background-size: cover;
+    }
+    .abt-detail{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .footer-call-email {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        grid-gap: 0;
+        letter-spacing: .5px;
+        gap: 0;
+        flex-wrap: wrap;
+    }
+    .abt-img{
+        padding: 0px 40px 40px 0px;
+    }
 }

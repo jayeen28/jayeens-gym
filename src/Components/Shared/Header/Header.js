@@ -5,7 +5,7 @@ import jayeensGym from '../../../images/Jayeensgymblack.png'
 import './Header.css';
 const Header = () => {
     const { user, signout, isLoading } = useAuth();
-    if (isLoading) { return <Spinner animation="grow" variant="light" /> }
+    if (isLoading) { return <Spinner animation="grow" /> }
     console.log(user)
     return (
         <header className="header-section">
@@ -16,7 +16,7 @@ const Header = () => {
                             <img src={jayeensGym} alt="JayeensGymLogo" />
                         </div>
                     </Link>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto"></Nav>
                         <Nav className="header-nav">
