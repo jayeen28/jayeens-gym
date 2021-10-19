@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar, Spinner } from 'react-bootstrap';
+import { Nav, Navbar, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import jayeensGym from '../../../images/Jayeensgymblack.png'
@@ -6,11 +6,10 @@ import './Header.css';
 const Header = () => {
     const { user, signout, isLoading } = useAuth();
     if (isLoading) { return <Spinner animation="grow" /> }
-    console.log(user)
     return (
         <header className="header-section">
-            <Navbar expand="lg" className="nav-section">
-                <Container>
+            <div className="container">
+                <Navbar expand="lg" className="nav-section">
                     <Link to='/home'>
                         <div className="jayeensgym-logo">
                             <img src={jayeensGym} alt="JayeensGymLogo" />
@@ -36,8 +35,8 @@ const Header = () => {
                             </div>
                         </Nav>
                     </Navbar.Collapse>
-                </Container>
-            </Navbar>
+                </Navbar>
+            </div>
         </header>
     );
 };
