@@ -1,0 +1,23 @@
+.error-page {
+  padding: 8% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+.error-page h1 {
+  color: red;
+  font-size: 100px;
+}
+.error-page h4 {
+  font-size: 44px;
+}
+.error-page a{
+  width: 240px;
+  background-color: transparent;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: 1px solid #C9AB81;
+  font-size: 15px;
+}
