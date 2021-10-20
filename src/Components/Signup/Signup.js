@@ -6,7 +6,7 @@ import googleBtn from '../../images/google-btn.png';
 import { useHistory } from 'react-router';
 
 const Signup = () => {
-    const { signUp, googleSignIn, error } = useAuth();
+    const { signUp, googleSignIn, errorMsg } = useAuth();
     const { register, handleSubmit } = useForm();
     let history = useHistory()
 
@@ -24,7 +24,7 @@ const Signup = () => {
                     </div>
                     <div className="signup-form">
                         {/* sign up form */}
-                        {/* error message*/} <p style={{ color: 'red' }}>{error}</p>
+                        {/* error message*/} <p style={{ color: 'red' }}>{console.log(errorMsg)}</p>
                         <form onSubmit={handleSubmit(onSubmit)} className="signin-up-form">
                             <input {...register("userName")} className="user-inputs" type="text" placeholder="Name" />
                             <input {...register("email")} className="user-inputs" type="email" id="sp-email" placeholder="Email" />

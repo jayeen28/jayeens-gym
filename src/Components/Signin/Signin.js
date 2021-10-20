@@ -6,7 +6,7 @@ import googleBtn from '../../images/google-btn.png';
 import './Signin.css';
 
 const Signin = () => {
-    const { signIn, googleSignIn, setuser, setisLoading, seterror, error } = useAuth();
+    const { signIn, googleSignIn, setuser, setisLoading, manageSigninError, errorMsg } = useAuth();
     const { register, handleSubmit } = useForm();
     const location = useLocation();
     const history = useHistory();
@@ -19,7 +19,7 @@ const Signin = () => {
                 setuser(res.user);
                 history.push(redirect_url)
             })
-            .catch(error => seterror(error.message))
+            .catch((error) => manageSigninError(error.message))
             .finally(() => setisLoading(false))
     }
     //handle google sign in
@@ -28,8 +28,9 @@ const Signin = () => {
             .then((res) => {
                 setuser(res.user);
                 history.push(redirect_url);
-            }).catch(error => {
-                seterror(error.message);
+            })
+            .catch(error => {
+                manageSigninError(error.message);
                 setisLoading(false)
             });
     }
@@ -43,7 +44,7 @@ const Signin = () => {
                         </div>
                         {/* sign in form */}
                         <div className="signin-form">
-                            {/* error message*/} {error && <p style={{ color: 'red' }}>{error}</p>}
+                            {/* error message*/} <p style={{ color: 'red' }}>{errorMsg}</p>
                             <form onSubmit={handleSubmit(onSubmit)} className="signin-up-form">
                                 <input {...register("email")} className="user-inputs" type="email" placeholder="Your email" />
                                 <input {...register("password")} className="user-inputs" type="password" placeholder="Your password" />

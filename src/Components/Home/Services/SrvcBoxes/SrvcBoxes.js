@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './Service.css';
-const Service = ({ service }) => {
+import './SrvcBoxes.css';
+
+const SrvcBoxes = ({ service }) => {
     const { id, title, img, description } = service;
     return (
         <div className="srvc-box" style={{ width: '18rem' }}>
@@ -18,4 +19,4 @@ const Service = ({ service }) => {
     );
 };
 
-export default Service;
+export default SrvcBoxes;

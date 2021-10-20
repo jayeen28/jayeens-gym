@@ -5,10 +5,19 @@ import { useEffect, useState } from "react";
 initialAuthentication();
 const useFirebase = () => {
     const [user, setuser] = useState({});
-    const [error, seterror] = useState('')
+    const [error, seterror] = useState('');
+    const [errorMsg, seterrorMsg] = useState('');
     const [isLoading, setisLoading] = useState(true);
     const auth = getAuth();
     const googleAuthProvider = new GoogleAuthProvider();
+
+    //manage Sign in error message 
+    const manageSigninError = (error) => {
+        error.includes('wrong-password') ? seterrorMsg('Your password is incorrect')
+            : error.includes('user-not-found') ? seterrorMsg('User not found in database')
+                : error.includes('popup-closed-by-user') ? seterrorMsg('Sorry! you have closed the popup')
+                    : seterrorMsg('');
+    }
 
     //signup user
     const signUp = (email, password, userName, history) => {
@@ -81,9 +90,11 @@ const useFirebase = () => {
         setisLoading,
         updateName,
         seterror,
+        manageSigninError,
+        error,
         isLoading,
         user,
-        error
+        errorMsg,
     }
 
 }
