@@ -12,15 +12,19 @@ const useFirebase = () => {
     const [isLoading, setisLoading] = useState(true);
     const auth = getAuth();
     const googleAuthProvider = new GoogleAuthProvider();
-
+    console.log(error)
     //manage Sign in error message 
     const manageSigninError = (error) => {
         error.includes('wrong-password') ? seterrorMsg('Your password is incorrect')
             : error.includes('user-not-found') ? seterrorMsg('User not found in database')
                 : error.includes('popup-closed-by-user') ? seterrorMsg('Sorry! you have closed the popup')
                     : error.includes('to many failed login attempts') ? seterrorMsg('Too many faild login attempts. Please try again later')
-                        : seterrorMsg('');
+                        : error.includes('6 characters') ? seterrorMsg('Password should be at least 6 characters')
+                            : error.includes('invalid-email') ? seterrorMsg('Email address is invalid')
+                                : error.includes('missing-email') ? seterrorMsg('Please enter email address')
+                                    : seterrorMsg('');
     }
+    //
 
     //signup user
     const signUp = (email, password, userName, history) => {
@@ -31,7 +35,7 @@ const useFirebase = () => {
                 history?.push('/home');
             })
             .catch((error) => {
-                seterror(error.message);
+                manageSigninError(error.message);
             })
             .finally({});
     }
@@ -58,7 +62,6 @@ const useFirebase = () => {
     const googleSignIn = () => {
         setisLoading(true);
         return signInWithPopup(auth, googleAuthProvider)
-
     }
 
     //sign out user
