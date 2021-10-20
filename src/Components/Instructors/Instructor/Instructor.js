@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Instructor.css';
 const Instructor = ({ instructor }) => {
     const { name, img, adrs, salary } = instructor;
@@ -11,7 +12,7 @@ const Instructor = ({ instructor }) => {
                 <h5>{name}</h5>
                 <p>Address: {adrs}</p>
                 <p>Salary: {salary}</p>
-                <button>Book now</button>
+                <Link to='/contactus'>Book now</Link>
             </div>
         </div>
     );

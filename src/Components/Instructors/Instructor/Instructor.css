@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
-.ins-information button{
+.ins-information a{
     width: 128px;
     background-color: #182326;
     color: white;
@@ -33,7 +33,7 @@
     border: 1px solid #C9AB81;
     font-size: 15px;
 }
-.ins-information button:hover{
+.ins-information a:hover{
     border: 1px solid #C9AB81;
     color: white;
     transition: 1s;
