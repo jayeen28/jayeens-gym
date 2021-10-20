@@ -1,3 +1,5 @@
+import { faSignInAlt, faSignOutAlt, faUserAstronaut, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Nav, Navbar, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
@@ -24,14 +26,14 @@ const Header = () => {
                                 <Link to="/contactus">Contact us</Link>
                             </div>
                             <div className="nav-buttons">
-                                {user.email ? <button className="nav-button" onClick={() => { signout() }} >Sign out</button> :
+                                {user.email ? <button className="nav-button" onClick={() => { signout() }} ><FontAwesomeIcon icon={faSignOutAlt} /> Sign out</button> :
                                     <span>
-                                        <Link to="/signin" className="nav-button">Sign in</Link>
-                                        <Link to="/signup" className="nav-button">Sign up</Link>
+                                        <Link to="/signin" className="nav-button"><FontAwesomeIcon icon={faSignInAlt} /> Sign in</Link>
+                                        <Link to="/signup" className="nav-button"><FontAwesomeIcon icon={faUserPlus} /> Sign up</Link>
                                     </span>}
                             </div>
                             <div className="profile-content">
-                                {user.displayName && <div className="profile-name">{user.displayName}</div>}
+                                {user.displayName && <div className="profile-name"><FontAwesomeIcon icon={faUserAstronaut} /> {user.displayName}</div>}
                             </div>
                         </Nav>
                     </Navbar.Collapse>
