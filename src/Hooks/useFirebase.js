@@ -1,8 +1,10 @@
 import initialAuthentication from "../Firebase/Firebase.init";
 import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useEffect, useState } from "react";
+
 // firebase initialization
 initialAuthentication();
+
 const useFirebase = () => {
     const [user, setuser] = useState({});
     const [error, seterror] = useState('');
@@ -16,7 +18,8 @@ const useFirebase = () => {
         error.includes('wrong-password') ? seterrorMsg('Your password is incorrect')
             : error.includes('user-not-found') ? seterrorMsg('User not found in database')
                 : error.includes('popup-closed-by-user') ? seterrorMsg('Sorry! you have closed the popup')
-                    : seterrorMsg('');
+                    : error.includes('to many failed login attempts') ? seterrorMsg('Too many faild login attempts. Please try again later')
+                        : seterrorMsg('');
     }
 
     //signup user

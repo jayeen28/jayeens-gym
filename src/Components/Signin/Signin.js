@@ -44,7 +44,7 @@ const Signin = () => {
                         </div>
                         {/* sign in form */}
                         <div className="signin-form">
-                            {/* error message*/} <p style={{ color: 'red' }}>{errorMsg}</p>
+                            {/* error message*/} {errorMsg && <p style={{ color: 'red' }}>{errorMsg}</p>}
                             <form onSubmit={handleSubmit(onSubmit)} className="signin-up-form">
                                 <input {...register("email")} className="user-inputs" type="email" placeholder="Your email" />
                                 <input {...register("password")} className="user-inputs" type="password" placeholder="Your password" />

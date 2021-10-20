@@ -11,7 +11,7 @@ form.signin-up-form {
 .sin-contents {
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    gap: 12px;
     padding: 5% 0;
 }
 .user-inputs {
