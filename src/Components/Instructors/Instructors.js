@@ -6,7 +6,7 @@ import instructorBanner from '../../images/instructorpagebanner.jpg';
 const Instructors = () => {
     const [instructors, setinstructors] = useState([]);
     useEffect(() => {
-        fetch('https://github.com/Jayeen29/jayeens-gym/raw/main/api-img-jayeens-gym/instructors.json')
+        fetch('https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/instructors.json')
             .then(res => res.json())
             .then(data => setinstructors(data))
     }, [])

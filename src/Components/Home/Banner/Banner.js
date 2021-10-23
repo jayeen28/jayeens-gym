@@ -8,7 +8,7 @@ const Banner = () => {
     const [reviews, setreviews] = useState([]);
     //load banner reviews data
     useEffect(() => {
-        fetch('https://github.com/Jayeen29/jayeens-gym/raw/main/api-img-jayeens-gym/reviews.json')
+        fetch('https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/reviews.json')
             .then(res => res.json())
             .then(data => setreviews(data))
     }, [])

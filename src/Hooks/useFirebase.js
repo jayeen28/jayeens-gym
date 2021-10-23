@@ -12,7 +12,6 @@ const useFirebase = () => {
     const [isLoading, setisLoading] = useState(true);
     const auth = getAuth();
     const googleAuthProvider = new GoogleAuthProvider();
-    console.log(error)
     //manage Sign in error message 
     const manageSigninError = (error) => {
         error.includes('wrong-password') ? seterrorMsg('Your password is incorrect')
