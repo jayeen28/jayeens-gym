@@ -2,42 +2,42 @@
     {
         "name": "Horace Thompson",
         "_id": "616dbbe6b95465bae3e1d618",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-7.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-7.jpg",
         "adrs": "Washingtonville, New York",
         "salary": "$1200"
     },
     {
         "name": "Jessie Ruiz",
         "_id": "616dbbe6a63b826103e5a119",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-8.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-8.jpg",
         "adrs": "Washington, Iowa",
         "salary": "$1600"
     },
     {
         "name": "Scott Nichols",
         "_id": "616dbbe66ef34dba508de0ac",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-9.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-9.jpg",
         "adrs": "Franklin, Michigan",
         "salary": "$1400"
     },
     {
         "name": "Lester Baldwin",
         "_id": "616dbbe6a50f542921de79b3",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-10.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-10.jpg",
         "adrs": "Franklin, North Carolina",
         "salary": "$2200"
     },
     {
         "name": "Bruce Swanson",
         "_id": "616dbbe61d65e734a40ab206",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-11.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-11.jpg",
         "adrs": "Clinton, Wisconsin",
         "salary": "$1700"
     },
     {
         "name": "Ron Black",
         "_id": "616dbbe6f3b6c639da19b80b",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-12.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-12.jpg",
         "adrs": "Centerville, Montana",
         "salary": "$2300"
     }

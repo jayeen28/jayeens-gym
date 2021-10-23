@@ -2,42 +2,42 @@
     {
         "name": "Nick Poggi",
         "_id": "616de2d4eedd647de52277c5",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-13.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-13.jpg",
         "review": "Excellent personal training.",
         "time": "a day ago"
     },
     {
         "name": "Kodi Duncan",
         "_id": "616de2d4629c1b4b97850d34",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-14.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-14.jpg",
         "review": "Best choice Ive made training at JSG.",
         "time": "2 months ago"
     },
     {
         "name": "Eric Hnatov",
         "_id": "616de2d429f665cace3b519b",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-15.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-15.jpg",
         "review": "This is a fantastic gym!! ",
         "time": "3 months ago"
     },
     {
         "name": "Chris Almeland",
         "_id": "616de2d40c88f25a5a1b1c74",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-16.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-16.jpg",
         "review": "Fitness is hands-down my favorite gym.",
         "time": "a year ago"
     },
     {
         "name": "Mike Ashworth",
         "_id": "616de2d44115dd6867de04f1",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-17.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-17.jpg",
         "review": "Easily the best gym in the city.",
         "time": "a year ago"
     },
     {
         "name": "Phil Carter",
         "_id": "616de2d49584458a8a2296e4",
-        "img": "https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/images/img-18.jpg",
+        "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/images/img-18.jpg",
         "review": "By far the best facility around.",
         "time": "a year ago"
     }

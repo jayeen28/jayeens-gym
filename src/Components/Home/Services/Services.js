@@ -8,7 +8,7 @@ const Services = () => {
 
     // load services boxes data
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/servicesData.json')
+        fetch('https://github.com/Jayeen29/jayeens-gym/raw/main/api-img-jayeens-gym/servicesData.json')
             .then(res => res.json())
             .then(data => setservices(data))
     }, []);
