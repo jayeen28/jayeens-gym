@@ -8,7 +8,7 @@ const Services = () => {
 
     // load services boxes data
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/servicesData.json')
+        fetch('https://blooming-plains-72339.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setservices(data))
     }, []);
@@ -19,7 +19,7 @@ const Services = () => {
             </div>
             <div className="service-boxes">
                 {
-                    services?.map(srvc => <SrvcBoxes service={srvc} key={srvc.id}></SrvcBoxes>)
+                    services?.map(srvc => <SrvcBoxes service={srvc} key={srvc._id}></SrvcBoxes>)
                 }
             </div>
         </div>

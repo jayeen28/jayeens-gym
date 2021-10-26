@@ -8,7 +8,7 @@ const Banner = () => {
     const [reviews, setreviews] = useState([]);
     //load banner reviews data
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/Jayeen29/jayeens-gym/main/api-img-jayeens-gym/reviews.json')
+        fetch('https://blooming-plains-72339.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setreviews(data))
     }, [])

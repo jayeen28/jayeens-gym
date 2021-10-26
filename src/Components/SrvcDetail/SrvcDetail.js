@@ -7,16 +7,11 @@ const SrvcDetail = () => {
     const [service, setservice] = useState({});
     const { title, description, img } = service;
     const { srvcId } = useParams();
-
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/Jayeen29/api-img-jayeens-gym/main/servicesData.json')
+        fetch(`https://blooming-plains-72339.herokuapp.com/services/${srvcId}`)
             .then(res => res.json())
             .then(data => {
-                data.forEach(srvc => {
-                    if (srvc.id === srvcId) {
-                        setservice(srvc);
-                    }
-                })
+                setservice(data);
             })
     }, [])
 
