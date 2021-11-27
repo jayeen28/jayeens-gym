@@ -84,7 +84,7 @@ const useFirebase = () => {
             setisLoading(false);
         });
         return () => unsubscribed;
-    }, [])
+    }, [auth])
 
     return {
         signIn,

@@ -13,7 +13,7 @@ const SrvcDetail = () => {
             .then(data => {
                 setservice(data);
             })
-    }, [])
+    }, [srvcId])
 
     return (
         <div className="srvc-detail-section">
